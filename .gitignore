@@ -1,0 +1,11 @@
+# Local build artifacts
+*.exe
+*.out
+*.o
+*.obj
+*.class
+
+# Editor / OS files
+.vscode/*.log
+.DS_Store
+Thumbs.db
