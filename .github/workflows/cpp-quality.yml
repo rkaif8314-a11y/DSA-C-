@@ -16,7 +16,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          mapfile -d '' files < <(find . -type f -name '*.cpp' -print0)
+          mapfile -d '' files < <(find . -type f \( -name '*.cpp' -o -name '*.cc' -o -name '*.cxx' \) -not -path './.git/*' -print0)
           if [ "${#files[@]}" -eq 0 ]; then
             echo 'No C++ source files found.'
             exit 1
